@@ -39,6 +39,7 @@
         "method": "GET",
         "timeout": 0,
         "headers": {
+            // ADD YOUR OWN API KEY HERE
             "x-apisports-key": "", 
         },
       };
@@ -51,6 +52,7 @@
             "method": "GET",
             "timeout": 0,
             "headers": {
+                // ADD YOUR OWN API KEY HERE
                 "x-apisports-key": "", 
             },
           };
