@@ -20,11 +20,7 @@
 
 
 // Print the next eight fixtures for the team in the aside
-    // Store football api key
-    // Store football api URL
-    // var apiKey = "36f083f714bc286ffd7b350b91beee74"
-    // var apiURL = "https://v3.football.api-sports.io/"
-
+  
     var homeTeams = [];
     var awayTeams = [];
     var dates = [];
@@ -43,7 +39,7 @@
         "method": "GET",
         "timeout": 0,
         "headers": {
-            "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
+            "x-apisports-key": "", 
         },
       };
       
@@ -55,7 +51,7 @@
             "method": "GET",
             "timeout": 0,
             "headers": {
-                "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
+                "x-apisports-key": "", 
             },
           };
         
