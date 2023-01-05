@@ -30,7 +30,7 @@
         "method": "GET",
         "timeout": 0,
         "headers": {
-            "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
+            "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", "12d77ebad0a8311875bc30b74d047c99" 
         },
       };
       
