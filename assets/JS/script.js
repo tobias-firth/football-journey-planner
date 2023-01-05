@@ -1,10 +1,14 @@
 // Click button to update favorite team
     // Add event listener for when button is clicked, a modal appears requesting the user to enter their favourite team and their nearest train station
 
-    var input = "arsenal"
+   
 
 // Store user input favourite team as a variable
     // Store this in local storage
+    var teamInput = "arsenal"
+
+    localStorage.setItem("favouriteTeam",teamInput);
+    localStorage.getItem("favouriteTeam");
 
 
 // Click button to update location
@@ -20,20 +24,40 @@
 
 
 // Print the next eight fixtures for the team in the aside
-  
+
+// Array to store the home teams for the next eight games
     var homeTeams = [];
+
+    // Array to store the away teams for the next eight games    
     var awayTeams = [];
+
+    // Array to store the dates of the next eight games    
     var dates = [];
+
+    // Array to store the kick off times for the next eight games
     var times = [];
+
+    // Array to store the stadia the next eight games are played in
     var stadia = [];
+
+    // Array to store the cities the next eight games are played in
     var cities = [];
+
+    // Array to store the next eight fixtures for the inputted team (homeTeam vs awayTeam)
     var fixtureList = [];
+
+    // Array to store the locations of the next eight games (stadium, city)
     var locations = [];
+
+    // Array to store the dates and times of the next eight games (dates, times)
     var datesAndTimes = [];
 
+    // Element which the fixture list will be appended to
     var fixtureListContainer = $(".content");
+    // Append a ul element to the fixtureListContainer to create a list
     var fixtureListEl = $(fixtureListContainer).append("<ul>")
 
+    // settings for the football API
     var settings = {
         "url": "https://v3.football.api-sports.io/teams?name=" + input + "",
         "method": "GET",
@@ -44,6 +68,8 @@
         },
       };
       
+
+      // Fetch the team ID from the API based on the inputted value
       $.ajax(settings).done(function (response) {
         var teamId = response.response[0].team.id;
         
@@ -67,38 +93,30 @@
                 // Store, for each fixture, the away team in an array
                 awayTeams.push(results.response[i].teams.away.name);
 
-                // store, for each fixture, the date of the match in an array
+                // Store, for each fixture, the date of the match in an array
                 dates.push(moment(results.response[i].fixture.date).format("dddd, Do MMMM YYYY"));
 
-
-                // store, for each fixture, the time of the match in an array
+                // Store, for each fixture, the time of the match in an array
                 times.push(moment(results.response[i].fixture.date).format("HH:mm"));
 
-                // store, for each fixture, the stadium in an array
+                // Store, for each fixture, the stadium in an array
                 stadia.push(results.response[i].fixture.venue.name);
 
-                // store, for each fixture, the city in an array
+                // Store, for each fixture, the city in an array
                 cities.push(results.response[i].fixture.venue.city);
 
-                // store the fixtures in an array (home team vs away team) 
+                // Store the fixtures in an array (home team vs away team) 
                 fixtureList.push(homeTeams[i] + " vs. " + awayTeams[i]);
 
+                // Store, for each fixture, the locations in an array (stadium and city)
                 locations.push(stadia[i] + ", " + cities[i])
 
+                // Store, for each fixture the date and time in an array
                 datesAndTimes.push(dates[i] + ", " + times[i]);
 
                 $(fixtureListEl).append("<li> <h4>" + fixtureList[i] + "</h4><hr>" + "<h5>" + locations[i] + "</h5>" + "<p>" + datesAndTimes[i] + "</p></li>")
             }
 
-            // console.log(fixtureList)
-            // console.log(locations)
-            // console.log(datesAndTimes);
-
-            // for each fixture we need:
-                // the date and time in suitable format, 
-                // the stadium and/or city, 
-                // the home team name, 
-                // the away team name. 
           });
           console.log(fixtureEl)
 
