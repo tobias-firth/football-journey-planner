@@ -28,7 +28,7 @@ teamForm.addEventListener("submit", function(event) {
 // Save the entered postcode to local storage when the form is submitted
 postcodeForm.addEventListener("submit", function(event) {
   event.preventDefault();
-  localStorage.setItem("postcode", postcodeInput.value);
+  localStorage.setItem("postcode", postcodeInput.value.replace(/\s/g,''));
 
   // Close the modal
   $("#postcodeModal").modal("hide");
