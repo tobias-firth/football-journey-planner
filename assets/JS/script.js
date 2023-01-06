@@ -1,6 +1,7 @@
 // Click button to update favorite team
     // Add event listener for when button is clicked, a modal appears requesting the user to enter their favourite team and their nearest train station
 
+
    // Array of teams
 var teams = [
   "Arsenal",
@@ -82,8 +83,13 @@ teams.forEach(team => {
   select.add(option);
 });
 
+
 // Store user input favourite team as a variable
     // Store this in local storage
+    var teamInput = "arsenal"
+
+    localStorage.setItem("favouriteTeam",teamInput);
+    localStorage.getItem("favouriteTeam");
 
     // var teamInput = "arsenal"
 
