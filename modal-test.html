@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journey Planner Football</title>
+  <!-- Link to the Bootstrap CSS file -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <!-- The button that will open the modal for the favourite team -->
+  <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">
+    Update Team
+  </button>
+
+  <!-- The modal element for the favourite team -->
+  <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamModalLabel">Select your favourite team</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="teamForm">
+          <div class="modal-body">
+            <label for="teamSelect">Select your favourite team:</label>
+            <select id="teamSelect" name="teamSelect">
+            <option></option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" id="saveBtn" value="Save">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<!-- The button that will open the modal for the postcode -->
+<button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#postcodeModal">
+  Update Postcode
+</button>
+
+<!-- The modal element for the postcode -->
+<div class="modal fade" id="postcodeModal" tabindex="-1" role="dialog" aria-labelledby="postcodeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="postcodeModalLabel">Enter your postcode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="postcodeForm">
+        <div class="modal-body">
+          <label for="postcodeInput">Enter your postcode:</label>
+          <input type="text" id="postcodeInput">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+    <!-- Link to the Bootstrap and JavaScript file -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./assets/JS/modal-test.js"></script>
+  </body>
+  </html>
+  
