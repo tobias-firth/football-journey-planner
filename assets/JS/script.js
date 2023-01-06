@@ -3,7 +3,7 @@
 
    // Array of teams
 var teams = [
-   "Arsenal",
+  "Arsenal",
   "Aston Villa",
   "Bournemouth",
   "Brighton & Hove Albion",
@@ -84,7 +84,7 @@ teams.forEach(team => {
 
 // Store user input favourite team as a variable
     // Store this in local storage
-    
+
     // var teamInput = "arsenal"
 
     // localStorage.setItem("favouriteTeam",teamInput);
