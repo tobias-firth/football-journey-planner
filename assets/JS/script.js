@@ -65,7 +65,7 @@ form.onsubmit = function(event) {
   var team = select.options[select.selectedIndex].value;
 
   // Store the team in local storage
-  localStorage.setItem("favoriteTeam", team);
+  localStorage.setItem("favouriteTeam", team);
 
   // Close the modal
   modal.style.display = "none";
@@ -86,9 +86,9 @@ teams.forEach(team => {
 
 // Store user input favourite team as a variable
     // Store this in local storage
-    var teamInput = "arsenal"
+    //var teamInput = "arsenal"
 
-    localStorage.setItem("favouriteTeam",teamInput);
+    //localStorage.setItem("favouriteTeam",teamInput);
     localStorage.getItem("favouriteTeam");
 
     // var teamInput = "arsenal"
