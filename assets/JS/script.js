@@ -7,8 +7,6 @@ var teams = ["Arsenal", "Aston Villa", "Brentford", "Brighton", "Bournemouth", "
 var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","L44EL","SW66HH","LS110ES","LE27FL","L40TH","M113FF","M160RA","NE14ST","NG25FJ","SO145FP","N170AP","WD180ER","E202ST","WV14QR"];
 
 
-
-
 // Store user input favourite team as a variable
     // Store this in local storage
     var teamInput = "Leeds"

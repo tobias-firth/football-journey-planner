@@ -67,3 +67,8 @@
     border-radius: 15px;
     height: 180px;
 }
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+}
