@@ -4,9 +4,10 @@ html {
 
 .text {
     font-family: 'Kanit', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px rgba(128, 128, 128, 0.585);
 }
 
 /* jumbotron section */
@@ -59,10 +60,9 @@ html {
 }
 
 .nav-link {
-    margin: 5px;
+    margin: 3px;
     padding: 4px;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .navbar-collapse {
