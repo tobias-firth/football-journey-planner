@@ -1,0 +1,74 @@
+.text {
+    font-family: Arial 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: rgb(199, 45, 70);
+  height: 200px;
+}
+
+.jumbotron h1 {
+  font-size: 55px;
+}
+
+#navbarNav > .navbar-nav > .nav-item > .text {
+    position: relative;
+    font-weight: 400;
+}
+
+.left {
+    height: 600px;
+}
+
+.right {
+    height: 600px;
+}
+
+.leftheading {
+    background-color: rgb(199, 45, 70);
+}
+
+.rightheading {
+    background-color: rgb(46, 128, 206);
+}
+
+#heading {
+    color: aliceblue;
+    border-radius: 15px;
+    height: 85px;
+    margin-top: 18px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    background-color: rgb(228, 228, 228);
+    border-radius: 15px;
+    height: 518px;
+    margin-top: 18px;
+}
+
+.journey {
+    background-color: rgb(228, 228, 228);
+    border-radius: 15px;
+    height: 320px;
+    margin-top: 18px;
+}
+
+.map {
+    margin-top: 18px;
+    background-color: rgb(46, 128, 206);
+    border-radius: 15px;
+    height: 180px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+}
