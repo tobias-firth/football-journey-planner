@@ -15,6 +15,7 @@
 <body>
     <!-- Header -->
     <header>
+        <!-- backgroundIMG -->
         <div class="jumbotron">
 
           <!-- Navbar -->
@@ -24,7 +25,7 @@
             </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <i class="fa-solid fa-bars"></i>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,9 +37,6 @@
                   <a class="nav-link text" href="#">Matches</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text" href="#">News</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link text" href="#">Players</a>
                 </li>
                 <li class="nav-item">
@@ -48,8 +46,18 @@
             </div>
             
           </nav>
+
         </div>
     </header>
+  
+          <!-- Matches Button -->
+          <div class="btncontainer">
+            <!-- The button that will open the modal for the favourite team -->
+            <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">Update Team</button>
+        
+            <!-- The button that will open the modal for the postcode -->
+            <button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#postcodeModal">Update Postcode</button>
+            </div>
 
      <!-- Main Content -->
      <div class="container">
@@ -57,16 +65,64 @@
           <!-- Left -->
           <div class="col-6 left">
             <section class="leftheading" id="heading"><h2 class="text">Upcoming Football Matches England</h2></section>
-            <section class="content"></section>
+            <section class="content" id="content"></section>
           </div>
           <!-- Right -->
           <div class="col-6 right">
             <section class="rightheading" id="heading"><h2 class="text">Find Your Journey</h2></section>
-            <section class="journey"></section>
-            <div class="map"></div>
+            <section class="journey" id="journey"></section>
+            <div class="map" id="map"></div>
           </div>
         </div>
      </div>
+
+  <!-- The modal element for the favourite team -->
+  <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="teamModalLabel">Select your favourite team</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="teamForm">
+          <div class="modal-body">
+            <label for="teamSelect">Select your favourite team:</label>
+            <select id="teamSelect" name="teamSelect">
+            <option></option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" id="saveBtn" value="Save">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- The modal element for the postcode -->
+  <div class="modal fade" id="postcodeModal" tabindex="-1" role="dialog" aria-labelledby="postcodeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="postcodeModalLabel">Enter your postcode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="postcodeForm">
+        <div class="modal-body">
+          <label for="postcodeInput">Enter your postcode:</label>
+          <input type="text" id="postcodeInput">
+        </div>
+        <div class="modal-footer">
+          <input type="submit" class="btn btn-primary" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
