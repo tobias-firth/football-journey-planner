@@ -2,18 +2,17 @@
     // Add event listener for when button is clicked, a modal appears requesting the user to enter their favourite team and their nearest train station
 
 
-    
+var teams = ["Arsenal", "Aston Villa", "Brentford", "Brighton", "Bournemouth", "Chelsea", "Crystal Palace", "Everton", "Fulham", "Leeds", "Leicester", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Nottingham Forest", "Southampton", "Tottenham", "West Ham", "Wolves"];
 
-
+var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","L44EL","SW66HH","LS110ES","LE27FL","L40TH","M113FF","M160RA","NE14ST","NG25FJ","SO145FP","N170AP","WD180ER","E202ST","WV14QR"];
 
 
 // Store user input favourite team as a variable
     // Store this in local storage
-    var teamInput = "arsenal"
-
+    var teamInput = "Leeds"
+    
     localStorage.setItem("favouriteTeam",teamInput);
     localStorage.getItem("favouriteTeam");
-
 
 // Click button to update location
 // Add event listener for when button is clicked, a modal appears
@@ -56,6 +55,10 @@
     // Array to store the dates and times of the next eight games (dates, times)
     var datesAndTimes = [];
 
+    // Arrat to store the postcodes of the next eight games
+
+    var gamePostcodes = [];
+
     // Element which the fixture list will be appended to
     var fixtureListContainer = $(".content");
     // Append a ul element to the fixtureListContainer to create a list
@@ -63,11 +66,13 @@
 
     // settings for the football API
     var settings = {
-        "url": "https://v3.football.api-sports.io/teams?name=" + input + "",
+        "url": "https://v3.football.api-sports.io/teams?name=" + teamInput + "",
         "method": "GET",
         "timeout": 0,
         "headers": {
             "x-apisports-key": "", 
+            // ADD YOUR OWN API KEY HERE
+            // "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
         },
       };
       
@@ -82,7 +87,7 @@
             "timeout": 0,
             "headers": {
                 // ADD YOUR OWN API KEY HERE
-                "x-apisports-key": "", 
+                // "x-apisports-key": "36f083f714bc286ffd7b350b91beee74",
             },
           };
         
@@ -117,11 +122,20 @@
                 // Store, for each fixture the date and time in an array
                 datesAndTimes.push(dates[i] + ", " + times[i]);
 
-                $(fixtureListEl).append("<li> <h4>" + fixtureList[i] + "</h4><hr>" + "<h5>" + locations[i] + "</h5>" + "<p>" + datesAndTimes[i] + "</p></li>")
+                for (var j=0; j<20; j++){
+                    if (homeTeams[i]===teams[j]) {
+                        gamePostcodes.push(postCodes[j])
+                    }
+                }
+                    
             }
+            console.log(homeTeams)
+            console.log(teams)
+            console.log(fixtureList)
+            console.log(gamePostcodes);
 
           });
-          console.log(fixtureEl)
+          
 
 
      });
