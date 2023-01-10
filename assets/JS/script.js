@@ -73,7 +73,8 @@
         "timeout": 0,
         "headers": { 
             // ADD YOUR OWN API KEY HERE
-            "x-apisports-key": "12d77ebad0a8311875bc30b74d047c99", 
+            "x-apisports-key": "", 
+ 
         },
       };
       
@@ -87,7 +88,8 @@
             "timeout": 0,
             "headers": {
                 // ADD YOUR OWN API KEY HERE
-                "x-apisports-key": "12d77ebad0a8311875bc30b74d047c99",
+                "x-apisports-key": "",
+
             },
           };
         

@@ -80,6 +80,7 @@
             </div>
             <a id="game-button-0" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
           </div>
+
           <div data-input="1" class="card-body">
             <div>
               <h5 id="fixture-1" class="card-title"></h5>
@@ -131,16 +132,25 @@
           </div>
         </section>
       </div>
-      <!-- Right -->
-      <div class="col-6 right">
-        <section class="rightheading" id="heading">
-          <h2 class="text">Find Your Journey</h2>
-        </section>
-        <section class="journey" id="journey"></section>
-        <div class="map" id="map"></div>
-      </div>
-    </div>
-  </div>
+      
+     <!-- Right -->
+          <div class="col-6 right">
+            <section class="rightheading" id="heading"><h2 class="text">Find Your Journey</h2></section>
+            <section class="journey" id="journey">
+              <div id="MapInputs">
+                <label for="start">Starting Point:</label><br>
+                <input type="text" id="start"><br>
+                <label for="end">End Point:</label><br>
+                <input type="text" id="end"><br><br>
+                <button onclick="getDirections()">Show Directions</button>
+                <button onclick="clearMap()">Clear Map</button>
+                <br><br>
+              </div>
+              <div id="steps"></div>
+            </section>
+            <div class="displayMap" id="displayMap">
+              <div id="map"></div>
+            </div>
 
   <!-- The modal element for the favourite team -->
   <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel"
@@ -196,9 +206,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/4f5d39c147.js" crossorigin="anonymous"></script>
+
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6SHiRbe9WjAZBigORhANG5ooV3PPNzng&callback=initMap">
+</script>
+  <script src="./assets/JS/script.js"></script>
+  <script src="./assets/JS/modal.js"></script>
+  <script src="./assets/JS/directions.js"></script>
+
   <script src="./assets/JS/modal.js"></script>
   <script src="./assets/JS/script.js"></script>
-  <!-- <script src="./assets/JS/modal-test.js"></script> -->
 </body>
 
 </html>
