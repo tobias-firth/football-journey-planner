@@ -1,20 +1,8 @@
-// Click button to update favorite team
-    // Add event listener for when button is clicked, a modal appears requesting the user to enter their favourite team and their nearest train station
-
-// Store user input favourite team as a variable
-    // Store this in local storage
-    
-// Click button to update location
-// Add event listener for when button is clicked, a modal appears
-
-// Store user input of location as a variable
-    // getelementbyid value from input
-    // Store this in local storage
-
 // Store todays date as variable in format YYYY-MM-DD
     var today = moment().format("YYYY-MM-DD");
     console.log(today);
 
+    var selectedTeam = ''
 
 // Print the next eight fixtures for the team in the aside
 
@@ -53,14 +41,33 @@
     var fixtureListContainer = $(".content");
     // Append a ul element to the fixtureListContainer to create a list
     var fixtureListEl = $(fixtureListContainer).append("<ul>")
+    
+    // Save the selected team to local storage when the form is submitted
+    teamForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    homeTeams = [];
+    awayTeams = [];
+    dates = [];
+    times = [];
+    stadia = [];
+    cities = [];
+    fixtureList = [];
+    locations = [];
+    datesAndTimes = [];
+    gamePostcodes = [];
+    selectedTeam = teamSelect.value
+    localStorage.setItem("favouriteTeam", selectedTeam);
+    // Close the modal
+    $("#teamModal").modal("hide");
+    console.log(selectedTeam)
+ ;
 
     // settings for the football API
     var settings = {
-        "url": "https://v3.football.api-sports.io/teams?name=" + teamSelect + "",
+        "url": "https://v3.football.api-sports.io/teams?name=" + selectedTeam + "",
         "method": "GET",
         "timeout": 0,
-        "headers": {
-            "x-apisports-key": "", 
+        "headers": { 
             // ADD YOUR OWN API KEY HERE
             "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
         },
@@ -70,7 +77,6 @@
       // Fetch the team ID from the API based on the inputted value
       $.ajax(settings).done(function (response) {
         var teamId = response.response[0].team.id;
-        
         var fixtures = {
             "url": "https://v3.football.api-sports.io/fixtures?team=" + teamId + "&next=8&league=39",
             "method": "GET",
@@ -137,7 +143,7 @@
 
      });
 
-
+    });
 // When user clicks on the "plan" button, plan journey from users home location to location of the match
 
 
