@@ -1,140 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
-    <link href="https://fonts.cdnfonts.com/css/vikeys-personal-use" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/CSS/styles.css" />
-    <title>Football Journey Planner</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+  <link href="https://fonts.cdnfonts.com/css/vikeys-personal-use" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/CSS/styles.css" />
+  <title>Football Journey Planner</title>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <!-- backgroundIMG -->
-        <div class="jumbotron">
+  <!-- Header -->
+  <header>
+    <!-- backgroundIMG -->
+    <div class="jumbotron">
 
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg customNav">
-            <a class="navbar-brand" href="#">
-              <h1 class="text"><i class="fa-brands fa-pied-piper"></i>Football Journey Planner 2023</h1>
-            </a>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg customNav">
+        <a class="navbar-brand" href="#">
+          <h1 class="text"><i class="fa-brands fa-pied-piper"></i>Football Journey Planner 2023</h1>
+        </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fa-solid fa-bars"></i>
-            </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link text" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text" href="#">Matches</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text" href="#">Players</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text" href="#">Teams</a>
-                </li>
-              </ul>
-            </div>
-            
-          </nav>
-
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text" href="#">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text" href="#">Players</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text" href="#">Teams</a>
+            </li>
+          </ul>
         </div>
-    </header>
-  
-          <!-- Matches Button -->
-          <div class="btncontainer">
-            <!-- The button that will open the modal for the favourite team -->
-            <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">Update Team</button>
-        
-            <!-- The button that will open the modal for the postcode -->
-            <button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#postcodeModal">Update Postcode</button>
-            </div>
 
-     <!-- Main Content -->
-     <div class="container">
-        <div class="row">
-          <!-- Left -->
-          <div class="col-6 left">
-            <section class="leftheading" id="heading"><h2 class="text">Upcoming Football Matches</h2></section>
-            <section class="content">
-              <div data-input="0" class="card-body">
-                <div>
-                <h5 id = "fixture-0" class="card-title"></h5>
-                <p id = "location-0" class="card-text"></p>
-              </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="1" class="card-body">
-                <div>
-                <h5 id = "fixture-1" class="card-title"></h5>
-                <p id = "location-1"class="card-text"></p>
-                </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="2" class="card-body">
-                <div>
-                <h5 id = "fixture-2" class="card-title"></h5>
-                <p id = "location-2" class="card-text"></p>
-                </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="3" class="card-body">
-                <div>
-                <h5 id = "fixture-3" class="card-title"></h5>
-                <p id = "location-3" class="card-text"></p>
-                </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="4" class="card-body">
-                <div>
-                <h5 id = "fixture-4" class="card-title"></h5>
-                <p id = "location-4" class="card-text"></p>
-              </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="5" class="card-body">
-                <div>
-                <h5 id = "fixture-5" class="card-title"></h5>
-                <p id = "location-5" class="card-text">.</p>
-                </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="6" class="card-body">
-                <div>
-                <h5  id = "fixture-6" class="card-title"></h5>
-                <p id = "location-6" class="card-text"></p>
-                </div>
-                <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-              <div data-input="7" class="card-body">
-                <div>
-                  <h5 id = "fixture-7" class="card-title"></h5>
-                  <p id = "location-7" class="card-text"></p>
-                </div>
-                  <a href="#" class="btn btn-primary plan-btn">Plan Journey</a>
-              </div>
-            </section>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Matches Button -->
+  <div class="btncontainer">
+    <!-- The button that will open the modal for the favourite team -->
+    <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">Update
+      Team</button>
+
+    <!-- The button that will open the modal for the postcode -->
+    <button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal"
+      data-target="#postcodeModal">Update Postcode</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Left -->
+      <div class="col-6 left">
+        <section class="leftheading" id="heading">
+          <h2 class="text">Upcoming Football Matches</h2>
+        </section>
+        <section class="content">
+          <div data-input="0" class="card-body">
+            <div>
+              <h5 id="fixture-0" class="card-title"></h5>
+              <p id="location-0" class="card-text"></p>
+            </div>
+            <a id="game-button-0" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
           </div>
-          <!-- Right -->
-          <div class="col-6 right">
-            <section class="rightheading" id="heading"><h2 class="text">Find Your Journey</h2></section>
-            <section class="journey" id="journey"></section>
-            <div class="map" id="map"></div>
+          <div data-input="1" class="card-body">
+            <div>
+              <h5 id="fixture-1" class="card-title"></h5>
+              <p id="location-1" class="card-text"></p>
+            </div>
+            <a id="game-button-1" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
           </div>
-        </div>
-     </div>
+          <div data-input="2" class="card-body">
+            <div>
+              <h5 id="fixture-2" class="card-title"></h5>
+              <p id="location-2" class="card-text"></p>
+            </div>
+            <a id="game-button-2" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+          <div data-input="3" class="card-body">
+            <div>
+              <h5 id="fixture-3" class="card-title"></h5>
+              <p id="location-3" class="card-text"></p>
+            </div>
+            <a id="game-button-3" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+          <div data-input="4" class="card-body">
+            <div>
+              <h5 id="fixture-4" class="card-title"></h5>
+              <p id="location-4" class="card-text"></p>
+            </div>
+            <a id="game-button-4" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+          <div data-input="5" class="card-body">
+            <div>
+              <h5 id="fixture-5" class="card-title"></h5>
+              <p id="location-5" class="card-text">.</p>
+            </div>
+            <a id="game-button-5" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+          <div data-input="6" class="card-body">
+            <div>
+              <h5 id="fixture-6" class="card-title"></h5>
+              <p id="location-6" class="card-text"></p>
+            </div>
+            <a id="game-button-6" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+          <div data-input="7" class="card-body">
+            <div>
+              <h5 id="fixture-7" class="card-title"></h5>
+              <p id="location-7" class="card-text"></p>
+            </div>
+            <a id="game-button-7" href="#" class="btn btn-primary plan-btn">Plan Journey</a>
+          </div>
+        </section>
+      </div>
+      <!-- Right -->
+      <div class="col-6 right">
+        <section class="rightheading" id="heading">
+          <h2 class="text">Find Your Journey</h2>
+        </section>
+        <section class="journey" id="journey"></section>
+        <div class="map" id="map"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- The modal element for the favourite team -->
-  <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
+  <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -147,7 +157,7 @@
           <div class="modal-body">
             <label for="teamSelect">Select your favourite team:</label>
             <select id="teamSelect" name="teamSelect">
-            <option></option>
+              <option></option>
             </select>
           </div>
           <div class="modal-footer">
@@ -158,26 +168,27 @@
     </div>
   </div>
   <!-- The modal element for the postcode -->
-  <div class="modal fade" id="postcodeModal" tabindex="-1" role="dialog" aria-labelledby="postcodeModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="postcodeModalLabel">Enter your postcode</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+  <div class="modal fade" id="postcodeModal" tabindex="-1" role="dialog" aria-labelledby="postcodeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="postcodeModalLabel">Enter your postcode</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="postcodeForm">
+          <div class="modal-body">
+            <label for="postcodeInput">Enter your postcode:</label>
+            <input type="text" id="postcodeInput">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Save">
+          </div>
+        </form>
       </div>
-      <form id="postcodeForm">
-        <div class="modal-body">
-          <label for="postcodeInput">Enter your postcode:</label>
-          <input type="text" id="postcodeInput">
-        </div>
-        <div class="modal-footer">
-          <input type="submit" class="btn btn-primary" value="Save">
-        </div>
-      </form>
     </div>
-  </div>
   </div>
 
 
@@ -187,6 +198,7 @@
   <script src="https://kit.fontawesome.com/4f5d39c147.js" crossorigin="anonymous"></script>
   <script src="./assets/JS/modal.js"></script>
   <script src="./assets/JS/script.js"></script>
-    <!-- <script src="./assets/JS/modal-test.js"></script> -->
+  <!-- <script src="./assets/JS/modal-test.js"></script> -->
 </body>
+
 </html>
