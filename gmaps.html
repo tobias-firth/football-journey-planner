@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <style>
+      /* Set the size of the map container */
+      #map {
+        width: 600px;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Get Directions</h1>
+    <p>Enter your starting point and end point below:</p>
+    <label for="start">Starting Point:</label><br>
+    <input type="text" id="start"><br>
+    <label for="end">End Point:</label><br>
+    <input type="text" id="end"><br><br>
+    <button onclick="getDirections()">Show Directions</button>
+    <button onclick="clearMap()">Clear Map</button>
+    <br><br>
+    <!-- The map will be displayed in this element -->
+    <div id="map"></div>
+    <br>
+    <!-- The journey steps will be displayed in this element -->
+    <div id="steps"></div>
+    <!-- Load the Google Maps JavaScript API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6SHiRbe9WjAZBigORhANG5ooV3PPNzng&callback=initMap">
+    </script>
+    <!-- Load the directions script -->
+    <script src="./assets/JS/directions.js"></script>
+  </body>
+</html>
