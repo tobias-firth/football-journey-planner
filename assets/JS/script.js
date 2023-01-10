@@ -72,7 +72,7 @@ var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","
         "headers": {
             "x-apisports-key": "", 
             // ADD YOUR OWN API KEY HERE
-            // "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
+            "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
         },
       };
       
@@ -87,7 +87,7 @@ var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","
             "timeout": 0,
             "headers": {
                 // ADD YOUR OWN API KEY HERE
-                // "x-apisports-key": "36f083f714bc286ffd7b350b91beee74",
+                "x-apisports-key": "36f083f714bc286ffd7b350b91beee74",
             },
           };
         
@@ -134,17 +134,24 @@ var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","
             console.log(fixtureList)
             console.log(gamePostcodes);
 
-          });
-          
 
+            // Show fixtures in a list on webpage
+            for (var k=0; k<fixtureList.length; k++) {
+                $("#fixture-" + k + "").text(fixtureList[k]);
+                $("#location-" + k + "").text(locations[k]);
+            }
+          });
+        
+          
+        
 
      });
 
 
-    // Get next 8 fixtures for the team
-    // For loop, insert a list element for each match and a button to plan the journey
-
 // When user clicks on the "plan" button, plan journey from users home location to location of the match
+
+
+
 // Print map of journey
 // Print stages of journey
 
