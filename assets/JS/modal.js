@@ -4,7 +4,7 @@ var teamSelect = document.getElementById("teamSelect");
 var updatePostcodeBtn = document.getElementById("updatePostcodeBtn");
 var postcodeForm = document.getElementById("postcodeForm");
 var postcodeInput = document.getElementById("postcodeInput");
-
+// var selectedTeam = ''
 // An array of English Premier League teams
 var teams = ["Arsenal", "Aston Villa", "Brentford", "Brighton", "Bournemouth", "Chelsea", "Crystal Palace", "Everton", "Fulham", "Leeds", "Leicester", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Nottingham Forest", "Southampton", "Tottenham", "West Ham", "Wolves"];
 
@@ -18,14 +18,16 @@ teams.forEach(function(team) {
   teamSelect.appendChild(option);
 });
 
-// Save the selected team to local storage when the form is submitted
-teamForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  localStorage.setItem("favouriteTeam", teamSelect.value);
+// // Save the selected team to local storage when the form is submitted
+// teamForm.addEventListener("submit", function(event) {
+//   event.preventDefault();
+//   selectedTeam = teamSelect.value
+//   localStorage.setItem("favouriteTeam", selectedTeam);
+//   // Close the modal
+//   $("#teamModal").modal("hide");
+//   console.log(selectedTeam)
+// });
 
-  // Close the modal
-  $("#teamModal").modal("hide");
-});
 
 // Save the entered postcode to local storage when the form is submitted
 postcodeForm.addEventListener("submit", function(event) {
