@@ -156,9 +156,9 @@ html {
 .content {
     background-color: rgb(228, 228, 228);
     border-radius: 15px;
-    height: 510px;
+    height: auto;
     margin-top: 10px;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 .journey {
@@ -169,13 +169,19 @@ html {
     overflow: scroll;
 }
 
-.map {
+.displayMap {
     margin-top: 10px;
     background-color: #169EF2;
     border-radius: 15px;
-    height: 180px;
+    height: auto;
+    width: 100%;
     overflow: scroll;
 }
+
+#map {
+    width: 600px;
+    height: 600px;
+  }
 
 .card-body {
     display: flex;
