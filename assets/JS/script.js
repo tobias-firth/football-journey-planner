@@ -1,19 +1,9 @@
 // Click button to update favorite team
     // Add event listener for when button is clicked, a modal appears requesting the user to enter their favourite team and their nearest train station
 
-
-var teams = ["Arsenal", "Aston Villa", "Brentford", "Brighton", "Bournemouth", "Chelsea", "Crystal Palace", "Everton", "Fulham", "Leeds", "Leicester", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Nottingham Forest", "Southampton", "Tottenham", "West Ham", "Wolves"];
-
-var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","L44EL","SW66HH","LS110ES","LE27FL","L40TH","M113FF","M160RA","NE14ST","NG25FJ","SO145FP","N170AP","WD180ER","E202ST","WV14QR"];
-
-
 // Store user input favourite team as a variable
     // Store this in local storage
-    var teamInput = "Leeds"
     
-    localStorage.setItem("favouriteTeam",teamInput);
-    localStorage.getItem("favouriteTeam");
-
 // Click button to update location
 // Add event listener for when button is clicked, a modal appears
 
@@ -66,7 +56,7 @@ var postCodes = ["N51BU","B66HE","TW80NT","BN19BL","BH77AF","SW61HS","SE256PU","
 
     // settings for the football API
     var settings = {
-        "url": "https://v3.football.api-sports.io/teams?name=" + teamInput + "",
+        "url": "https://v3.football.api-sports.io/teams?name=" + teamSelect + "",
         "method": "GET",
         "timeout": 0,
         "headers": {
