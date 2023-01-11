@@ -1,3 +1,5 @@
+let teamFormEl = document.getElementById("teamForm");
+
 // Store todays date as letiable in format YYYY-MM-DD
 let today = moment().format("YYYY-MM-DD");
 console.log(today);
@@ -47,7 +49,7 @@ let fixtureListContainer = $(".content");
 let fixtureListEl = $(fixtureListContainer).append("<ul>")
 
 // Save the selected team to local storage when the form is submitted
-teamForm.addEventListener("submit", function(event) {
+teamFormEl.addEventListener("submit", function(event) {
 event.preventDefault();
 homeTeams = [];
 awayTeams = [];
@@ -150,6 +152,7 @@ let settings = {
           gameDate = dates[j];
           gameTime = times[j].split(':');
           arriveTime = [gameTime[0]-1,gameTime[1]].join(':');
+          document.getElementById("end").value=gameStadium;
           console.log(gameStadium);
           console.log(gameDate);
           console.log(arriveTime);
