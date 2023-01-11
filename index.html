@@ -12,10 +12,18 @@
   <link href="https://fonts.cdnfonts.com/css/vikeys-personal-use" rel="stylesheet">
   <link rel="stylesheet" href="./assets/CSS/styles.css" />
   <title>Football Journey Planner</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/4f5d39c147.js" crossorigin="anonymous"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6SHiRbe9WjAZBigORhANG5ooV3PPNzng&callback=initMap"></script>
+  <script async defer src="./assets/JS/script.js"></script>
+  <script async defer src="./assets/JS/modal.js"></script>
+  <script async defer src="./assets/JS/directions.js"></script>
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- Header f -->
   <header>
     <!-- backgroundIMG -->
     <div class="jumbotron">
@@ -137,12 +145,14 @@
           <div class="col-6 right">
             <section class="rightheading" id="heading"><h2 class="text">Find Your Journey</h2></section>
             <section class="journey" id="journey">
-              <div id="MapInputs">
+              <div id="mapInputs">
+                <h1>Get Directions</h1>
+                <p>Enter your starting point and end point below:</p>
                 <label for="start">Starting Point:</label><br>
                 <input type="text" id="start"><br>
                 <label for="end">End Point:</label><br>
                 <input type="text" id="end"><br><br>
-                <button onclick="getDirections()">Show Directions</button>
+                <button onclick="getDirections(document.getElementById('start').value, document.getElementById('end').value)">Show Directions</button>
                 <button onclick="clearMap()">Clear Map</button>
                 <br><br>
               </div>
@@ -200,22 +210,6 @@
       </div>
     </div>
   </div>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/4f5d39c147.js" crossorigin="anonymous"></script>
-
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6SHiRbe9WjAZBigORhANG5ooV3PPNzng&callback=initMap">
-</script>
-  <script src="./assets/JS/script.js"></script>
-  <script src="./assets/JS/modal.js"></script>
-  <script src="./assets/JS/directions.js"></script>
-
-  <script src="./assets/JS/modal.js"></script>
-  <script src="./assets/JS/script.js"></script>
 </body>
 
 </html>
