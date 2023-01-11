@@ -90,13 +90,12 @@ let settings = {
         "timeout": 0,
         "headers": {
             // ADD YOUR OWN API KEY HERE
-            "x-apisports-key": "a7856a2aec583eaab6fcf9d5b66d58ba",
-
+            "x-apisports-key": "",
         },
       };
-    
-      $.ajax(fixtures).done(function (results) {
-        console.log(results)
+       
+          $.ajax(fixtures).done(function (results) {
+            console.log(results)
 
         for (let i=0; i<8; i++) {
             // Store, for each fixture, the home team in an array
@@ -133,34 +132,39 @@ let settings = {
             }
                 
         }
-        console.log(homeTeams)
-        console.log(teams)
-        console.log(fixtureList)
-        console.log(gamePostcodes);
 
+                for (let m=0; m<8; m++) {
+                  if (homeTeams[m] === selectedTeam){
+                    $("#game-" + m).addClass("fixtureHome");
+                  }
+                  else {
+                    $("#game-" + m).addClass("fixtureAway");
+                  } 
+                }
+              }; 
+                // Show fixtures in a list on webpage
+            for (var k=0; k<fixtureList.length; k++) {
+              $("#fixture-" + k + "").text(fixtureList[k]);
+              $("#location-" + k + "").text(locations[k]);
+              $("#time-" + k + "").text(datesAndTimes[k]);
+          }
+        });
+        
+        for (let l=0; l<8; j++) {
+          $("#game-button-" + l).on('click',function(event){
+            gameStadium = stadia[l];
+            gameDate = dates[l];
+            gameTime = times[l].split(':');
+            arriveTime = [gameTime[0]-1,gameTime[1]].join(':');
+            console.log(gameStadium);
+            console.log(gameDate);
+            console.log(arriveTime);
+          })
+        };     
+            })
 
-        // Show fixtures in a list on webpage
-        for (let k=0; k<fixtureList.length; k++) {
-            $("#fixture-" + k + "").text(fixtureList[k]);
-            $("#location-" + k + "").text(locations[k]);
-        }
-      });
-      
-      for (let j=0; j<8; j++) {
-        $("#game-button-" + j).on('click',function(event){
-          gameStadium = stadia[j];
-          gameDate = dates[j];
-          gameTime = times[j].split(':');
-          arriveTime = [gameTime[0]-1,gameTime[1]].join(':');
-          document.getElementById("end").value=gameStadium;
-          console.log(gameStadium);
-          console.log(gameDate);
-          console.log(arriveTime);
-        })
-      }
-    })
-});
-
+          
+     });
 // When user clicks on the "plan" button, plan journey from users home location to location of the match
 
 

@@ -18,16 +18,6 @@ teams.forEach(function(team) {
   teamSelect.appendChild(option);
 });
 
-// // Save the selected team to local storage when the form is submitted
-// teamForm.addEventListener("submit", function(event) {
-//   event.preventDefault();
-//   selectedTeam = teamSelect.value
-//   localStorage.setItem("favouriteTeam", selectedTeam);
-//   // Close the modal
-//   $("#teamModal").modal("hide");
-//   console.log(selectedTeam)
-// });
-
 
 // Save the entered postcode to local storage when the form is submitted
 postcodeForm.addEventListener("submit", function(event) {
