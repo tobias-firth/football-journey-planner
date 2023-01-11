@@ -73,7 +73,7 @@
         "timeout": 0,
         "headers": { 
             // ADD YOUR OWN API KEY HERE
-            "x-apisports-key": "", 
+            "x-apisports-key": "36f083f714bc286ffd7b350b91beee74", 
  
         },
       };
@@ -88,7 +88,7 @@
             "timeout": 0,
             "headers": {
                 // ADD YOUR OWN API KEY HERE
-                "x-apisports-key": "",
+                "x-apisports-key": "36f083f714bc286ffd7b350b91beee74",
 
             },
           };
@@ -225,7 +225,7 @@
             console.log(arriveTime);
           })
      });
-
+        
     });
 
 // When user clicks on the "plan" button, plan journey from users home location to location of the match
