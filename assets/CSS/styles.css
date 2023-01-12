@@ -319,11 +319,13 @@ button:active {
 }
 
 .fixtureAway {
-    background-color: #485083;
+    background-color: #ffffff;
+    padding: 15px;
 }
 
 .fixtureHome {
-    background-color: #717786;
+    background-color: #b6b6b6;
+    padding: 15px;
 }
 
 .game-btn {
