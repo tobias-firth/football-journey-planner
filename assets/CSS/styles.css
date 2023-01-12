@@ -16,7 +16,7 @@ html {
 .jumbotron {
   background-color: rgb(199, 45, 70);
   height: 300px;
-  background-image: url("./assets/PNG/soccer-players-action-professional-stadiumONE.jpg");
+  background-image: url("/assets/PNG/soccer-players-action-professional-stadiumONE.jpg");
   background-repeat: no-repeat;
   background-position-x: center center;
   background-size: 100%;
@@ -191,9 +191,10 @@ html {
 
 .fixture {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 2fr;
     border: 0;
     margin: 10px;
+    padding:5px;
     border-radius: 15px;
 }
 
@@ -209,5 +210,6 @@ html {
     background-color: #F2CB05;
     border-radius: 10px;
     border: 0;
-    margin:auto
+    margin:auto;
+    padding: 5px;
 }
