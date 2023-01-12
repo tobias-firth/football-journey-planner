@@ -31,4 +31,8 @@ Football has, for over a century, acted as a method of bringing people together 
 
 * In order to complete the project, we used HTML, CSS, JavaScript, Bootstrap, JQuery and Ajax. We used the Google Maps API and the api-football API. 
 * Adam and Tobias worked on the backend, with Tobias mainly focusing on the football API and Adam on the Google Maps API. Finding a suitable API was a challenge as an earlier iteration of the project used a different Journey Planning API which had a tighter limit on calls, making it less suitable for testing. 
-* Ian, Jalil and Petru worked on the frontend ...
+* Ian, Jalil and Petru worked on the frontend, with  
+Ian mainly focusing on the struture of HTML and the grid of CSS.  
+1.Improving the user experience.  
+2.Emphasize the Call to action button as yellow and biggest.  
+3.Separate  different area for each function.  

@@ -24,7 +24,6 @@
   <header>
     <!-- backgroundIMG -->
     <div class="jumbotron">
-
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg customNav">
         <a class="navbar-brand" href="#">
@@ -52,22 +51,18 @@
             </li>
           </ul>
         </div>
-
       </nav>
+      <!-- Matches Button -->
+     <div class="btncontainer">
+        <!-- The button that will open the modal for the favourite team -->
+        <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">Update Team</button>
+
+        <!-- The button that will open the modal for the postcode -->
+        <button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#postcodeModal">Update Postcode</button>
+     </div>
 
     </div>
   </header>
-
-  <!-- Matches Button -->
-  <div class="btncontainer">
-    <!-- The button that will open the modal for the favourite team -->
-    <button id="updateTeamBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#teamModal">Update
-      Team</button>
-
-    <!-- The button that will open the modal for the postcode -->
-    <button id="updatePostcodeBtn" type="button" class="btn btn-primary" data-toggle="modal"
-      data-target="#postcodeModal">Update Postcode</button>
-  </div>
 
   <!-- Main Content -->
   <div class="container">
@@ -123,6 +118,7 @@
               <h5 id="fixture-5" class="card-title"></h5>
               <p id="location-5" class="card-text">.</p>
               <p id="time-5" class="card-text"></p>
+
             </div>
             <a id="game-button-5" href="#" class="btn btn-primary plan-btn game-btn">Plan Journey</a>
           </div>
