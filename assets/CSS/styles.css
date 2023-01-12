@@ -311,9 +311,10 @@ button:active {
 
 .fixture {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 2fr;
     border: 0;
     margin: 10px;
+    padding:5px;
     border-radius: 15px;
 }
 
@@ -329,5 +330,6 @@ button:active {
     background-color: #F2CB05;
     border-radius: 10px;
     border: 0;
-    margin:auto
+    margin:auto;
+    padding: 5px;
 }

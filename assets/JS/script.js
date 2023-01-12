@@ -127,12 +127,27 @@ let settings = {
             datesAndTimes.push(dates[i] + ", " + times[i]);
 
             for (let j=0; j<20; j++){
-                if (homeTeams[i]===teams[j]) {
-                    gamePostcodes.push(postCodes[j])
-                }
+              if (homeTeams[i]===teams[j]) {
+                  gamePostcodes.push(postCodes[j])
+              }
+          }
+          for (let m=0; m<8; m++) {
+            if (homeTeams[m] === selectedTeam){
+              $("#game-" + m).addClass("fixtureHome");
             }
-                
-        }
+            else {
+              $("#game-" + m).addClass("fixtureAway");
+            } 
+          }
+         } 
+              
+              // Show fixtures in a list on webpage
+          for (var k=0; k<fixtureList.length; k++) {
+            $("#fixture-" + k + "").text(fixtureList[k]);
+            $("#location-" + k + "").text(locations[k]);
+            $("#time-" + k + "").text(datesAndTimes[k]);
+        
+          }
         console.log(homeTeams)
         console.log(teams)
         console.log(fixtureList)
