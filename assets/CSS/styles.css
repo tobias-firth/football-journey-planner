@@ -163,11 +163,11 @@ html {
 /* journey section */
 .journey {
     background-color: rgb(228, 228, 228);
-    border-radius: 15px;
+    border-radius: 10px;
     height: 365px;
     margin-top: 10px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    overflow: scroll;
+    overflow-x: hidden;
 }
 /* Plan Journey button */
 .plan-btn{
@@ -221,7 +221,30 @@ html {
     margin: 10px;
     background-color: rgba(240, 248, 255, 0.769);
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+}
+
+.journey::-webkit-scrollbar {
+    width: 12px;
+}
+
+.journey::-webkit-scrollbar-button {
+    background: transparent;
+    border-radius: 100%;
+}
+
+.journey::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+
+.journey::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid slategrey;
+    border-radius: 15px;
+}
+
+.journey::-webkit-scrollbar-track {
+    background-color: transparent
 }
 
 button {
