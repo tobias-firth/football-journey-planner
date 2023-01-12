@@ -14,14 +14,12 @@ html {
 /* jumbotron section */
 
 .jumbotron {
-  background-color: rgb(199, 45, 70);
-  height: 300px;
-  background-image: url("./assets/PNG/soccer-players-action-professional-stadiumONE.jpg");
+  height: 250px;
+  background-image: url("https://img.freepik.com/free-photo/soccer-players-action-professional-stadium_654080-1130.jpg?w=1380&t=st=1673475197~exp=1673475797~hmac=60b307600c1220b2a850f163c2e8db458dccba66b9138aa18f9a9de6a25cd323");
   background-repeat: no-repeat;
   background-position-x: center center;
   background-size: 100%;
   padding: 35px;
-  display: flex;
   width: auto;
 }
 
@@ -85,7 +83,7 @@ html {
     justify-content: center;
     margin: auto;
     margin-bottom: 50px;
-    margin-top: -13px;
+    margin-top: 75px;
 }
 
 #updateTeamBtn, #updatePostcodeBtn {
@@ -108,7 +106,7 @@ html {
     box-shadow: #D97904 0px 7px 0px 0px;
    }
 
-#updateTeamBtn:active, #updatePostcodeBtn:active, .game-btn:active {
+#updateTeamBtn:active, #updatePostcodeBtn:active, .game-btn:active, .plan-btn:active{
     background-color: #F2CB05;
     box-shadow: #D97904 0px 0px 0px 0px;
     transform: translateY(5px);
@@ -158,18 +156,57 @@ html {
     border-radius: 15px;
     height: auto;
     margin-top: 10px;
-    padding:10px
+    padding:10px;
     /* overflow: scroll; */
 }
 
+/* journey section */
 .journey {
     background-color: rgb(228, 228, 228);
     border-radius: 15px;
-    height: 320px;
+    height: 365px;
     margin-top: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     overflow: scroll;
 }
+/* Plan Journey button */
+.plan-btn{
+    margin: 0px 20px;
+    width: 120px;
+    height: 80px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #F2CB05;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    transition: all .3s ease;
+    box-shadow: #D97904 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 900;
+}
 
+/* City Card */
+.card-body {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(240, 248, 255, 0.769);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card-body > div {
+    width: 80%;
+}
+
+.card-title {
+    border-bottom: 0.4px solid #3131314a;
+}
+
+.card-text {
+    border-bottom: 0.4px solid #3131314a;
+}
+
+/* Map Section */
 .displayMap {
     margin-top: 10px;
     background-color: #169EF2;
@@ -177,16 +214,76 @@ html {
     height: auto;
     width: 100%;
     overflow: scroll;
+    margin-bottom: 30px;
+}
+
+#mapInputs{
+    margin: 10px;
+    background-color: rgba(240, 248, 255, 0.769);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#mapbtn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+#mapbtn:hover,
+#mapbtn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+#mapbtn:hover {
+  transform: translateY(-1px);
+}
+
+#mapbtn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.adp{
+    background-color: rgba(240, 248, 255, 0.769);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
 }
 
 #map {
     width: 600px;
-    height: 600px;
+    height: 720px;
   }
 
-.card-body {
-    display: flex;
-    flex-direction: row;
+.gm-style {
+    width: 90% !important;
 }
 
 .fixture {
